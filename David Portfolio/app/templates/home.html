@@ -1,0 +1,231 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>David Guevarra</title>
+  <link rel="stylesheet" href="{% static '/style/general.css' %}">
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+  <link rel="icon" href="{% static 'logo.png' %} ">
+</head>
+
+<body class="text-gray-300 flex-col flex-none ">
+
+  <!-- Header -->
+ 
+  <header id="navbar" class="fixed top-0 left-0 w-full bg-transparent p-4 transition-transform duration-300">
+    <nav class="flex justify-center items-center bg-transparent p-4">
+      <div class="flex items-center space-x-10">
+        <h1 class="text-2xl font-bold text-violet-600 hover:scale-110 transition-transform duration-300">DG</h1>
+        <ul class="flex space-x-10 text-white font-bold">
+          <li class="hover:scale-110 hover:-translate-y-1 transform transition-transform duration-300">
+            <a href="#about" class="hover:text-violet-600 transition-colors duration-300">About</a>
+          </li>
+          <li class="hover:scale-110 hover:-translate-y-2 transform transition-transform duration-300">
+            <a href="#projects" class="hover:text-violet-600 transition-colors duration-300">Projects</a>
+          </li>
+          <li class="hover:scale-110 hover:-translate-y-2 transform transition-transform duration-300">
+            <a href="#contact" class="hover:text-violet-600 transition-colors duration-300">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  
+
+<!-- Intro -->
+<section class=" header text-center py-20 bg-gradient-to-l from-purple-200 via-violet-400 to-indigo-600 overflow-hidden ">
+  <div class="container mx-auto flex items-center">
+    <!-- Introduction -->
+    <div class="text text-left p-10 ml-10">
+      <h2 class="text-5xl font-bold text-black mt-[20%] hover:scale-110 transition-transform duration-300">Hi, It's David</h2>
+      <p class="text-white text-lg mt-6 mr-80 hover:text-gray-200 transition-colors duration-300">
+        A 2nd-year Bachelor of Science in Information Technology (BSIT) student at STI College, specializing in front-end development and video editing.  
+        Passionate about crafting visually stunning and interactive web experiences, I combine my technical skills with creative expertise to bring ideas to life.
+        Whether it’s building responsive web designs or creating dynamic video content, I aim to deliver impactful and engaging projects.
+      </p>
+      
+      <!-- Buttons -->
+      <div class="flex items-center gap-3 mt-10">
+        <a href="#projects" class="bn5 hover:scale-105 transition-transform duration-300">View Projects</a>
+      </div>
+    </div>
+
+    <!-- Profile Picture -->
+    <div class="pic">
+      <a href="#about">
+        <img src="{% static 'guevarra.jpg' %}" alt="Profile Picture" 
+             class="w-[1000px] h-[400px] object-cover rounded-lg mx-auto mt-[100%] hover:scale-110 transition-transform duration-300">
+      </a>
+    </div>
+    
+</section>
+
+
+<section id="about" class="p-20 bg-gradient-to-l from-purple-200 via-violet-400 to-indigo-600 overflow-hidden">
+  <div id="glass" class="container mx-auto">
+    <!-- Section Title -->
+    <h2 class="text-3xl font-bold text-white mb-8 text-center">About Me</h2>
+
+    <!-- Slider Wrapper -->
+    <div class="slider-wrapper overflow-hidden relative ">
+      <!-- Slider Content -->
+      <div id="slider" class="flex transition-transform duration-700 ease-in-out">
+        <!-- Slide 1 -->
+        <div class="slide flex-none w-full md:w-1/2 p-4 transform translate-x-0 hover:scale-110 transition-transform duration-300">
+          <div class="details1  ">
+            <p class="text-lg text-center">
+              I am a dedicated frontend developer who thrives on crafting engaging and user-friendly web interfaces.
+            </p>
+          </div>
+        </div>
+        <!-- Slide 2 -->
+        <div class="slide flex-none w-full md:w-1/2 p-4 hover:scale-110 transition-transform duration-300">
+          <div class="details2   ">
+            <p class="text-lg text-center">
+              Alongside my technical expertise, I offer skills in video editing. i'm willing to learn more on my journey.
+            </p>
+          </div>
+        </div>
+        <!-- Slide 3 -->
+        <div class="slide flex-none w-full md:w-1/2 p-4 hover:scale-110 transition-transform duration-300">
+          <div class="details3   ">
+            <p class="text-lg text-center">
+              Over the past three months, I have been actively honing my skills in HTML, Java, and JavaScript. 
+            </p>
+          </div>
+        </div>
+        <!-- Slide 4 -->
+        <div class="slide flex-none w-full md:w-1/2 p-4 hover:scale-110 transition-transform duration-300">
+          <div class="details4   ">
+            <p class="text-lg text-center">
+              I am committed to continuous growth and always on the lookout for opportunities to expand my knowledge.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation Buttons -->
+    <div class="flex justify-center gap-4 mt-6">
+      <button
+        id="prevBtn"
+        class="bn5 bg-black px-4 py-2 rounded-md"
+      >
+       ← 
+      </button>
+      <button
+        id="nextBtn"
+        class="bn5 bg-black px-4 py-2 rounded-md"
+      >
+       →
+      </button>
+    </div>
+  </div>
+</section>
+
+
+
+
+  <section id="projects"class="py-16 bg-gradient-to-l from-purple-200 via-violet-400 to-indigo-600">
+    <div class="container mx-auto center">
+      <h2 class="text-3xl font-bold text-white mb-6 text-center">Projects</h2>
+
+      <div class="grid md:grid-cols-2 gap-3">
+        
+        <div class="pro1">
+          <h3 class="text-xl font-bold text-white mb-2 text-center mb-6 ">First Project</h3>
+          <img class=" rounded-lg w-auto max-h-64 mx-auto hover:scale-110 transition-transform duration-300" src="{% static 'mavis.png' %}" alt="pic">
+        </div>
+        <div class="pro2">
+          <h3 class="text-xl font-bold text-white mb-2 text-center mb-6 ">Second Project</h3>
+          <img class=" rounded-lg w-auto max-h-64 mx-auto hover:scale-110 transition-transform duration-300" src="{% static 'port.png' %}" alt="pic1">
+        </div>
+       
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="py-16 bg-white-400 bg-gradient-to-l from-purple-200 via-violet-400 to-indigo-600">
+    <div class=" contacts container w-[40%] mx-auto text-center ">
+      <h2 class="text-3xl font-bold text-white mb-6">Contact Me</h2>
+      <p class="text-white mb-4">Feel free to reach out to discuss projects or opportunities.</p>
+      <form action="#" class="max-w-md mx-auto">
+        <input type="text" placeholder="Your Name" class="w-full mb-4 px-4 py-2 rounded bg-white text-black">
+        <input type="email" placeholder="Your Email" class="w-full mb-4 px-4 py-2 rounded bg-white text-black">
+        <textarea placeholder="Your Message" class="w-full mb-4 px-4 py-2 rounded bg-white text-black"></textarea>
+        <button type="submit" class="bn5">Send Message</button>
+      </div>
+      
+    </div>
+    </form>
+
+
+
+
+
+  </section>
+
+</div>
+
+</body>
+
+<script>
+  const slider = document.getElementById("slider");
+  const prevBtn = document.getElementById("prevBtn");
+  const nextBtn = document.getElementById("nextBtn");
+
+  let currentIndex = 0;
+
+  // Function to update the slider position
+  const updateSliderPosition = () => {
+    const slideWidth = slider.children[0].offsetWidth;
+    slider.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+  };
+
+  // Event Listener for Previous Button
+  prevBtn.addEventListener("click", () => {
+    if (currentIndex > 0) {
+      currentIndex--;
+      updateSliderPosition();
+    }
+  });
+
+  // Event Listener for Next Button
+  nextBtn.addEventListener("click", () => {
+    if (currentIndex < slider.children.length - 1) {
+      currentIndex++;
+      updateSliderPosition();
+    }
+  });
+
+  // Resize Event to Recalculate Slide Width
+  window.addEventListener("resize", updateSliderPosition);
+</script>
+
+
+ <script>
+  let lastScrollTop = 0;
+  const navbar = document.getElementById("navbar");
+
+  window.addEventListener("scroll", () => {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (scrollTop > lastScrollTop) {
+      // Scrolling Down
+      navbar.style.transform = "translateY(-100%)";
+    } else {
+      // Scrolling Up
+      navbar.style.transform = "translateY(0)";
+    }
+
+    lastScrollTop = scrollTop;
+  });
+</script>
+
+
+</html>
